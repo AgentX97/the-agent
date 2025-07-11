@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog Vishnu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template Google Fonts -->
+    <link href="CSS/fonts/googleapi1.css" rel="stylesheet">
+    <link href="CSS/fonts/googleapi2.css" rel="stylesheet">
+
+    <!-- Template CSS Files -->
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/preloader.min.css" rel="stylesheet">
+    <link href="CSS/circle.css" rel="stylesheet">
+    <link href="CSS/font-awesome.min.css" rel="stylesheet">
+    <link href="CSS/fm.revealator.jquery.min.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
+
+    <!-- CSS Skin File -->
+    <link href="CSS/skins/green.css" rel="stylesheet">
+
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="CSS/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="CSS/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="CSS/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="CSS/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="CSS/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="CSS/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="CSS/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="CSS/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="CSS/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="CSS/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styleswitcher.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styleswitcher.css" />
+
+    <!-- Modernizr JS File -->
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="blog">
+    <!-- Live Style Switcher Starts - demo only -->
+    <div id="switcher" class="">
+        <div class="content-switcher">
+            <h4>STYLE SWITCHER</h4>
+            <ul>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('purple');" title="purple" class="color"><img
+                            src="img/purple.png" alt="purple" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('red');" title="red" class="color"><img src="img/red.png"
+                            alt="red" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('blueviolet');" title="blueviolet" class="color"><img
+                            src="img/blueviolet.png" alt="blueviolet" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('blue');" title="blue" class="color"><img
+                            src="img/blue.png" alt="blue" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('goldenrod');" title="goldenrod" class="color"><img
+                            src="img/goldenrod.png" alt="goldenrod" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('magenta');" title="magenta" class="color"><img
+                            src="img/magenta.png" alt="magenta" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('yellowgreen');" title="yellowgreen" class="color"><img
+                            src="img/yellowgreen.png" alt="yellowgreen" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('orange');" title="orange" class="color"><img
+                            src="img/orange.png" alt="orange" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('green');" title="green" class="color"><img
+                            src="img/green.png" alt="green" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="setActiveStyleSheet('yellow');" title="yellow" class="color"><img
+                            src="img/yellow.png" alt="yellow" /></a>
+                </li>
+            </ul>
+            <div id="hideSwitcher">&times;</div>
+        </div>
+    </div>
+    <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
+    <!-- Live Style Switcher Ends - demo only -->
+    <!-- Header Starts -->
+    <header class="header" id="navbar-collapse-toggle">
+        <!-- Fixed Navigation Starts -->
+        <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
+            <li class="icon-box">
+                <i class="fa fa-home"></i>
+                <a href="index.html">
+                    <!--				<img src="img/home1.png" alt="my picture" />-->
+                    <h2>Home</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-user"></i>
+                <a href="about.html">
+                    <!--				<img src="img/home1.png" alt="my picture" />-->
+                    <h2>About</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-briefcase"></i>
+                <a href="portfolio.html">
+                    <!--				<img src="img/home1.png" alt="my picture" />-->
+                    <h2>Portfolio</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-envelope-open"></i>
+                <a href="contact.html">
+                    <!--				<img src="img/home1.png" alt="my picture" />-->
+                    <h2>Contact</h2>
+                </a>
+            </li>
+            <li class="icon-box active">
+                <i class="fa fa-comments"></i>
+                <!--				<img src="img/home1.png" alt="my picture" />-->
+                <h2>Blog</h2>
+            </li>
+        </ul>
+        <!-- Fixed Navigation Ends -->
+        <!-- Mobile Menu Starts -->
+        <nav role="navigation" class="d-block d-lg-none">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-unstyled" id="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
+                    <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+                    <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                    <li class="active"><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu Ends -->
+    </header>
+    <!-- Header Ends -->
+    <!-- Page Title Starts -->
+    <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+        <h1>my <span>blog</span></h1>
+        <span class="title-bg">posts</span>
+    </section>
+    <!-- Page Title Ends -->
+    <!-- Main Content Starts -->
+    <section class="main-content revealator-slideup revealator-once revealator-delay1">
+        <div class="container">
+            <!-- Articles Starts -->
+            <div class="row">
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80029823"
+                                class="d-block position-relative overflow-hidden" target="new" id="line1">
+                                <img src="img/12Monkeys.jpg" class="img-fluid" alt="12 Monkeys">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/12_Monkeys_(TV_series)" target="new">12
+                                        MONKEYS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>12 Monkeys is an American television series on Syfy created by Terry Matalas and
+                                    Travis Fickett. It is a science fiction mystery drama with a time traveling plot
+                                    loosely adapting the 1995 film of the same name.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://disneyplusoriginals.disney.com/show/wandavision"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Wandavision.jpg" class="img-fluid" alt="WandaVision">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/WandaVision" target="new"> WANDAVISION</a>
+                                </h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>WandaVision is an American television miniseries created by Jac Schaeffer for the
+                                    streaming service Disney+. It shares continuity with the films of the franchise, and
+                                    takes place after the events of the film Avengers: Endgame (2019).
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/70281312"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/The Blacklist.jpg" class="img-fluid" alt="The Blacklist">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/The_Blacklist_(TV_series)" target="new">THE
+                                        BLACKLIST</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>The Blacklist is an American crime thriller television series. The show follows
+                                    Raymond "Red" Reddington a former U.S. Navy officer turned high-profile criminal who
+                                    voluntarily surrenders to the FBI after eluding capture for decades.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80057918"
+                                class="d-block position-relative overflow-hidden" target="new" id="line2">
+                                <img src="img/Lucifer.jpg" class="img-fluid" alt="Lucifer">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Lucifer_(TV_series)" target="new">LUCIFER</a>
+                                </h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Lucifer is an American urban fantasy television series developed by Tom Kapinos that
+                                    premiered on Fox on January 25, 2016. It is based on the DC Comics character created
+                                    by Neil Gaiman, Sam Kieth, and Mike Dringenberg taken from the comic book series The
+                                    Sandman.The series revolves around the story of Lucifer Morningstar, the Devil.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80097140"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Altered Carbon.jpg" class="img-fluid" alt="Altered Carbon">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Altered_Carbon_(TV_series)"
+                                        target="new">ALTERED CARBON</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Altered Carbon is an American cyberpunk television series created by Laeta Kalogridis
+                                    and based on the 2002 novel of the same title by English author Richard K.
+                                    Morgan.[1] In a world where consciousness can be transferred to different bodies,
+                                    Takeshi Kovacs, a former soldier turned investigator, must solve a murder.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80192098"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Money Hiest.jpg" class="img-fluid" alt="Money Hiest" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Money_Heist" target="new">MONEY HIEST</a>
+                                </h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Money Heist (Spanish: La casa de papel, "The House of Paper") is a Spanish heist
+                                    crime drama television series created by Álex Pina. The series traces two
+                                    long-prepared heists led by the Professor (Álvaro Morte), one on the Royal Mint of
+                                    Spain, and one on the Bank of Spain. The series was initially intended as a limited
+                                    series to be told in two parts.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80057281"
+                                class="d-block position-relative overflow-hidden" target="new" id="line3">
+                                <img src="img/Stranger Things.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Stranger_Things" target="new">STRANGER
+                                        THINGS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Stranger Things is an American science fiction horror mystery-thriller streaming
+                                    television series created by the Duffer Brothers and released on Netflix. Stranger
+                                    Things is set in the fictional rural town of Hawkins, Indiana, during the early
+                                    1980s. The nearby Hawkins National Laboratory ostensibly performs scientific
+                                    research for the United States Department of Energy, but secretly does experiments
+                                    into the paranormal and supernatural, including those that involve human test
+                                    subjects.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.history.com/shows/vikings"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Vikings.png" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Vikings_(2013_TV_series)"
+                                        target="new">VIKINGS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Vikings is a historical fantasy drama television series created and written by
+                                    Michael Hirst. Vikings is inspired by the sagas of Ragnar Lothbrok, a Viking who is
+                                    one of the best-known legendary Norse heroes and notorious as the scourge of
+                                    Anglo-Saxon England and West Francia. The show portrays Ragnar as a farmer who rises
+                                    to fame by raiding England and eventually becomes a Scandinavian king, with the
+                                    support of his family and fellow warriors.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/70202589"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/SHERLOCK.jfif" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Sherlock_(TV_series)" target="new">SHERLOCK
+                                        HOLMES</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Sherlock is a British crime television series based on Sir Arthur Conan Doyle's
+                                    Sherlock Holmes detective stories. It stars Benedict Cumberbatch as Sherlock Holmes
+                                    and Martin Freeman as Doctor John Watson.Sherlock has been praised for the quality
+                                    of its writing, acting, and directing. It has been nominated for numerous awards
+                                    including Emmys, BAFTAs and a Golden Globe, winning several awards across a variety
+                                    of categories.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.amazon.com/White-Collar-Season-1/dp/B002TWWOHE"
+                                class="d-block position-relative overflow-hidden" target="new" id="line4">
+                                <img src="img/WHITE COLLAR.jfif" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/White_Collar_(TV_series)" target="new">WHITE
+                                        COLLAR</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>White Collar is an American police procedural drama television series created by Jeff
+                                    Eastin, starring Tim DeKay as FBI Special Agent Peter Burke and Matt Bomer as Neal
+                                    Caffrey, a highly intelligent and multitalented con artist working as Burke's
+                                    criminal informant.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80002479"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/peaky-blinders.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)"
+                                        target="new">PEAKY BLINDERS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Peaky Blinders is a British period crime drama television series created by Steven
+                                    Knight. The series follows the exploits of the Shelby crime family in the direct
+                                    aftermath of the First World War. The fictional family is loosely based on a real
+                                    urban youth gang of the same name.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://tv.apple.com/us/show/see/umc.cmc.3s4mgg2y7h95fks9gnc4pw13m"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/See.jfif" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/See_(TV_series)" target="new">SEE</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>See is an American science fiction drama starring Jason Momoa and Alfre Woodard in
+                                    leading roles. In the distant future, following a plague, almost all of the human
+                                    race have lost the sense of sight, so society has had to find new ways to interact,
+                                    build, hunt, and survive.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.hbo.com/game-of-thrones"
+                                class="d-block position-relative overflow-hidden" target="new" id="line5">
+                                <img src="img/game-of-thrones.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Game_of_Thrones" target="new">GAME OF
+                                        THRONES</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Game of Thrones is an American fantasy drama television series created by David
+                                    Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, a
+                                    series of fantasy novels by George R. R. Martin, the first of which is A Game of
+                                    Thrones. It premiered on HBO in the United States on April 17, 2011, and concluded
+                                    on May 19, 2019.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80223989"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Chilling_Adventures_of_Sabrina.jpg" class="img-fluid"
+                                    alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Chilling_Adventures_of_Sabrina_(TV_series)"
+                                        target="new">CHILLING ADVENTURES OF SABRINA</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Chilling Adventures of Sabrina is an American supernatural horror streaming
+                                    television series developed by Roberto Aguirre-Sacasa for Netflix, based on the
+                                    Archie comic book series of the same name. It is a dark coming-of-age story that
+                                    includes horror and witchcraft in the fictional town of Greendale.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80238357"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/The-Order.jpeg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/The_Order_(TV_series)" target="new">THE
+                                        ORDER</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>The Order is a Canadian-American horror drama. The Order follows college student Jack
+                                    Morton as he joins the Hermetic Order of the Blue Rose, a secret society that
+                                    teaches and practices magic.As Jack goes deeper into the organization's history, he
+                                    uncovers dark family secrets and an underground battle between werewolves and the
+                                    magical dark arts.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.amazon.com/Flash-Complete-First-Season/dp/B00NERU614"
+                                class="d-block position-relative overflow-hidden" target="new" id="line6">
+                                <img src="img/The-Flash.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/The_Flash_(2014_TV_series)" target="new">THE
+                                        FLASH</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>The Flash is an American superhero television series developed by Greg Berlanti,
+                                    Andrew Kreisberg, and Geoff Johns, airing on The CW. It is based on the Barry Allen
+                                    incarnation of DC Comics character the Flash, a costumed superhero crime-fighter
+                                    with the power to move at superhuman speeds.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.amazon.com/CONSTANTINE-Season-1/dp/B00OFPICRO"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Constantine.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Constantine_(TV_series)"
+                                        target="new">CONSTANTINE</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Constantine is an American occult detective drama television series developed by
+                                    Daniel Cerone and David S. Goyer, based on the DC Comics character John
+                                    Constantine.[1] Matt Ryan stars as Constantine, a British exorcist and occult
+                                    detective who actively hunts supernatural entities.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80218200"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Titans.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Titans_(2018_TV_series)"
+                                        target="new">TITANS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Titans is an American superhero television series created by Akiva Goldsman, Geoff
+                                    Johns, and Greg Berlanti. Based on the DC Comics team Teen Titans, the series
+                                    depicts a group of young heroes who join forces in their fight against evil. Titans
+                                    follows the young superheroes of the eponymous team.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.netflix.com/in/title/80002612"
+                                class="d-block position-relative overflow-hidden" target="new" id="line7">
+                                <img src="img/Iron-Fist.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Iron_Fist_(TV_series)" target="new">IRON
+                                        FIST</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Marvel's Iron Fist, or simply Iron Fist, is an American television series created by
+                                    Scott Buck for the streaming service Netflix, based on the Marvel Comics character
+                                    of the same name. Danny Rand / Iron Fist, is a martial arts expert with the ability
+                                    to call upon a mystical power known as the "Iron Fist".
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.hotstar.com/in/tv/marvels-cloak--dagger/1260027851?utm_source=gwa"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/Cloak_&_Dagger.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Cloak_%26_Dagger_(TV_series)"
+                                        target="new">CLOAK AND DAGGER</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Marvel's Cloak & Dagger is an American television series created by Joe Pokaski for
+                                    Freeform, based on the Marvel Comics characters of the same name. The series stars
+                                    Olivia Holt and Aubrey Joseph as Tandy Bowen / Dagger and Tyrone Johnson / Cloak,
+                                    two teenagers with superpowers who form a partnership.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.hotstar.com/in/tv/marvels-inhumans/1260027596?utm_source=gwa"
+                                class="d-block position-relative overflow-hidden" target="new">
+                                <img src="img/inhumans.jpg" class="img-fluid" alt="Stranger Things" style="height: 195px;
+						    width: 350px;">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://en.wikipedia.org/wiki/Inhumans_(TV_series)"
+                                        target="new">INHUMANS</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Marvel's Inhumans, or simply Inhumans, is an American television series created by
+                                    Scott Buck for ABC, based on the Marvel Comics race of the same name. The series is
+                                    centered on Black Bolt, portrayed by Anson Mount. The Inhuman Royal Family escape to
+                                    Hawaii, where they must save themselves and the world.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Pagination Starts -->
+                <div class="col-12 mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center mb-0">
+                            <li class="page-item"><a class="page-link" href="#line1">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#line2">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#line3">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#line4">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#line5">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#line6">6</a></li>
+                            <li class="page-item"><a class="page-link" href="#line7">7</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Pagination Ends -->
+            </div>
+            <!-- Articles Ends -->
+        </div>
+
+    </section>
+
+    <!-- Template JS Files -->
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/styleswitcher.js"></script>
+    <script src="js/preloader.min.js"></script>
+    <script src="js/fm.revealator.jquery.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpGridGallery.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
