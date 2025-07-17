@@ -141,6 +141,14 @@
 				self.scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
 			}
 		});
+
+		// Close slideshow when clicking outside the portfolio item
+		this.slideshow.addEventListener('click', function(ev) {
+			// Only close if clicking directly on the slideshow background (not on the slideshow item)
+			if (ev.target === self.slideshow || ev.target === self.el.querySelector('section.slideshow')) {
+				self._closeSlideshow();
+			}
+		});
 	};
 
 	CBPGridGallery.prototype._openSlideshow = function( pos ) {
@@ -148,6 +156,8 @@
 		this.current = pos;
 
 		classie.addClass( this.el, 'slideshow-open' );
+		// Hide header when slideshow is opened
+		document.querySelector('.header').classList.add('hide-header');
 
 		/* position slideshow items */
 
@@ -283,6 +293,8 @@
 		classie.removeClass( this.el, 'slideshow-open' );
 		// remove class animatable from the slideshow grid
 		classie.removeClass( this.slideshow, 'animatable' );
+		// Show header when slideshow is closed
+		document.querySelector('.header').classList.remove('hide-header');
 
 		var self = this,
 			onEndTransitionFn = function( ev ) {
