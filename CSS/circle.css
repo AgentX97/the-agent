@@ -222,6 +222,16 @@
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+/* Initial state for animation */
+.c100-init .bar, .c100-init .fill {
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  -ms-transform: rotate(0deg) !important;
+  -o-transform: rotate(0deg) !important;
+  transform: rotate(0deg) !important;
+  transition: transform 1.5s ease-in-out;
+}
+
 .c100 {
   position: relative;
   font-size: 120px;
@@ -303,6 +313,11 @@
   width: 1em;
   height: 1em;
   clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+/* Add transition for smooth animation */
+.c100 .bar, .c100 .fill {
+  transition: transform 1.5s ease-in-out;
 }
 .c100.p1 .bar {
   -webkit-transform: rotate(3.6deg);
